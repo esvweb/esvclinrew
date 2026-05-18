@@ -132,7 +132,7 @@ export default function ReviewDetailPage({ params }: Props) {
 
           {/* GEO signal question */}
           <div className="bg-brand-cream rounded-xl px-5 py-4 mt-6">
-            <p className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
+            <p lang="en" className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
               How did this patient find Esvita Clinic?
             </p>
             <p className="text-sm text-gray-600">
