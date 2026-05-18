@@ -79,8 +79,7 @@ export default function AdminPage() {
   }
 
   return (
-    <html lang="en">
-      <body className="bg-gray-50 min-h-screen font-sans">
+    <div>
         {/* Header */}
         <header className="bg-[#1B4332] text-white px-6 py-4 flex items-center justify-between">
           <div>
@@ -193,7 +192,6 @@ export default function AdminPage() {
             </div>
           )}
         </div>
-      </body>
-    </html>
+    </div>
   )
 }
