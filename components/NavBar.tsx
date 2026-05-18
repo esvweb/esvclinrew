@@ -24,12 +24,6 @@ export default function NavBar({ locale }: Props) {
             <Link href={`/${locale}/about`} className="text-green-100 hover:text-white transition-colors">
               About
             </Link>
-            <Link
-              href={`/${locale}/submit-review`}
-              className="bg-white text-brand-green px-3 py-1.5 rounded-full text-xs font-semibold hover:bg-green-50 transition-colors"
-            >
-              + Write a Review
-            </Link>
           </div>
           <LanguageSwitcher currentLocale={locale} />
         </div>

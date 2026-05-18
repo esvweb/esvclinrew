@@ -74,7 +74,7 @@ export default function HomePage({ params, searchParams }: Props) {
             Verified reviews from international patients who chose Esvita Clinic in Istanbul
             for hair transplant, dental treatment, and aesthetic procedures.
           </p>
-          <AggregateRating average={aggregate.average} count={aggregate.count} />
+          <AggregateRating average={aggregate.average} count={aggregate.count} locale={locale} />
         </div>
       </section>
 

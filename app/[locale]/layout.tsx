@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Playfair_Display } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import Script from 'next/script'
@@ -8,12 +8,6 @@ import { notFound } from 'next/navigation'
 import { LOCALES, type Locale } from '@/types/review'
 import NavBar from '@/components/NavBar'
 import '../globals.css'
-
-const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
-  variable: '--font-inter',
-  display: 'swap',
-})
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -45,7 +39,7 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>
+    <html lang={locale} className={playfair.variable}>
       <body className="font-body bg-white text-gray-900 antialiased">
         <NextIntlClientProvider messages={messages}>
           <NavBar locale={locale} />
