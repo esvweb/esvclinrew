@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80"/>
+      <stop offset="100%" style="stop-color:#15803d"/>
+    </linearGradient>
+  </defs>
+  <!-- Speech bubble -->
+  <rect x="4" y="4" width="92" height="72" rx="14" ry="14" fill="none" stroke="url(#g)" stroke-width="5"/>
+  <path d="M62 76 Q66 76 66 82 L66 94 Q66 96 64 95 L50 82 Q48 76 54 76 Z" fill="none" stroke="url(#g)" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Single large star centered -->
+  <polygon points="50,16 56,34 76,34 60,46 66,64 50,52 34,64 40,46 24,34 44,34" fill="url(#g)"/>
+</svg>
