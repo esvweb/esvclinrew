@@ -11,7 +11,7 @@ import { buildLocalBusinessSchema } from '@/lib/schema'
 
 type Props = {
   params: { locale: string }
-  searchParams: { treatment?: string; rating?: string; page?: string }
+  searchParams: { treatment?: string; rating?: string; page?: string; sort?: string }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -36,26 +36,34 @@ export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }))
 }
 
-function sortByLocale(reviews: ReturnType<typeof getAllReviews>, locale: string) {
+function sortReviews(
+  reviews: ReturnType<typeof getAllReviews>,
+  locale: string,
+  sort: string,
+) {
   const localeKey = `review_text_${locale}` as keyof (typeof reviews)[0]
   return [...reviews].sort((a, b) => {
     const aHas = !!a[localeKey]
     const bHas = !!b[localeKey]
     if (aHas && !bHas) return -1
     if (!aHas && bHas) return 1
-    return 0
+    // Secondary: date sort
+    const dateA = new Date(a.date).getTime()
+    const dateB = new Date(b.date).getTime()
+    return sort === 'oldest' ? dateA - dateB : dateB - dateA
   })
 }
 
 export default async function HomePage({ params, searchParams }: Props) {
   const { locale } = params
-  const { treatment: treatmentFilter, rating: ratingFilter, page: pageParam } = searchParams
+  const { treatment: treatmentFilter, rating: ratingFilter, page: pageParam, sort: sortParam } = searchParams
+  const currentSort = sortParam === 'oldest' ? 'oldest' : 'newest'
   const t = await getTranslations()
 
   let reviews = getAllReviews()
   if (treatmentFilter) reviews = reviews.filter((r) => r.treatment_slug === treatmentFilter)
   if (ratingFilter) reviews = reviews.filter((r) => r.rating === parseInt(ratingFilter, 10))
-  reviews = sortByLocale(reviews, locale)
+  reviews = sortReviews(reviews, locale, currentSort)
 
   const aggregate = getAggregateRating()
   const treatments = getTreatments()
@@ -82,7 +90,7 @@ export default async function HomePage({ params, searchParams }: Props) {
       <section className="max-w-4xl mx-auto px-4 py-10">
         <div className="mb-6">
           <Suspense fallback={null}>
-            <FilterBar treatments={treatments} currentTreatment={treatmentFilter ?? ''} currentRating={ratingFilter ?? ''} />
+            <FilterBar treatments={treatments} currentTreatment={treatmentFilter ?? ''} currentRating={ratingFilter ?? ''} currentSort={currentSort} />
           </Suspense>
         </div>
 
@@ -99,6 +107,7 @@ export default async function HomePage({ params, searchParams }: Props) {
           currentPage={currentPage}
           currentTreatment={treatmentFilter}
           currentRating={ratingFilter}
+          currentSort={currentSort}
         />
       </section>
 

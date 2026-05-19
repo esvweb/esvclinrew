@@ -32,5 +32,8 @@
   "showing_reviews": "{count} yorum gösteriliyor",
   "page": "Sayfa",
   "previous": "Önceki",
-  "next": "Sonraki"
+  "next": "Sonraki",
+  "sort_newest": "Önce yeniler",
+  "sort_oldest": "Önce eskiler",
+  "sort_label": "Sırala"
 }

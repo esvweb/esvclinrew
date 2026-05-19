@@ -11,9 +11,10 @@ type Props = {
   currentPage: number
   currentTreatment?: string
   currentRating?: string
+  currentSort?: string
 }
 
-export default async function ReviewGrid({ reviews, locale, currentPage, currentTreatment, currentRating }: Props) {
+export default async function ReviewGrid({ reviews, locale, currentPage, currentTreatment, currentRating, currentSort }: Props) {
   const t = await getTranslations()
   const totalPages = Math.ceil(reviews.length / PER_PAGE)
   const page = Math.max(1, Math.min(currentPage, totalPages || 1))
@@ -23,6 +24,7 @@ export default async function ReviewGrid({ reviews, locale, currentPage, current
     const params = new URLSearchParams()
     if (currentTreatment) params.set('treatment', currentTreatment)
     if (currentRating) params.set('rating', currentRating)
+    if (currentSort && currentSort !== 'newest') params.set('sort', currentSort)
     if (p > 1) params.set('page', String(p))
     const qs = params.toString()
     return `/${locale}${qs ? `?${qs}` : ''}`

@@ -32,5 +32,8 @@
   "showing_reviews": "Показано {count} отзывов",
   "page": "Страница",
   "previous": "Назад",
-  "next": "Далее"
+  "next": "Далее",
+  "sort_newest": "Сначала новые",
+  "sort_oldest": "Сначала старые",
+  "sort_label": "Сортировка"
 }

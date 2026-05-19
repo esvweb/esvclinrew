@@ -32,5 +32,8 @@
   "showing_reviews": "Affichage de {count} avis",
   "page": "Page",
   "previous": "Précédent",
-  "next": "Suivant"
+  "next": "Suivant",
+  "sort_newest": "Plus récents",
+  "sort_oldest": "Plus anciens",
+  "sort_label": "Trier"
 }

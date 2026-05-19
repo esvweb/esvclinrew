@@ -32,5 +32,8 @@
   "showing_reviews": "Mostrando {count} recensioni",
   "page": "Pagina",
   "previous": "Precedente",
-  "next": "Successivo"
+  "next": "Successivo",
+  "sort_newest": "Più recenti",
+  "sort_oldest": "Meno recenti",
+  "sort_label": "Ordina"
 }

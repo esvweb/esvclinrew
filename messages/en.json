@@ -32,5 +32,8 @@
   "footer_disclaimer": "This site displays verified patient reviews for informational purposes.",
   "page": "Page",
   "previous": "Previous",
-  "next": "Next"
+  "next": "Next",
+  "sort_newest": "Newest first",
+  "sort_oldest": "Oldest first",
+  "sort_label": "Sort"
 }
