@@ -13,7 +13,7 @@
   "filter_label_rating": "Оценка",
   "filter_label_country": "Страна",
   "read_full_review": "Читать полный отзыв",
-  "verified_patient": "Подтверждённый Пациент",
+  "verified_patient": "Проверено",
   "featured": "Рекомендуем",
   "stars": "звёзд",
   "reviews_count": "{count} отзывов",
@@ -27,5 +27,10 @@
   "back_to_reviews": "Вернуться ко всем отзывам",
   "related_reviews": "Похожие Отзывы",
   "footer_copyright": "© 2025 Отзывы Esvita Clinic",
-  "footer_disclaimer": "На этом сайте публикуются проверенные отзывы пациентов в информационных целях."
+  "footer_disclaimer": "На этом сайте публикуются проверенные отзывы пациентов в информационных целях.",
+  "write_a_review": "Написать отзыв",
+  "showing_reviews": "Показано {count} отзывов",
+  "page": "Страница",
+  "previous": "Назад",
+  "next": "Далее"
 }

@@ -13,12 +13,14 @@
   "filter_label_rating": "Rating",
   "filter_label_country": "Country",
   "read_full_review": "Read full review",
-  "verified_patient": "Verified Patient",
+  "verified_patient": "Verified",
   "featured": "Featured",
   "stars": "stars",
   "reviews_count": "{count} reviews",
   "aggregate_rating_label": "Average Rating",
   "based_on": "Based on {count} verified reviews",
+  "write_a_review": "Write a Review",
+  "showing_reviews": "Showing {count} reviews",
   "treatment_page_title": "{treatment} Reviews",
   "treatment_page_subtitle": "What patients say about {treatment} at Esvita Clinic",
   "about_title": "About Esvita Clinic",
@@ -27,5 +29,8 @@
   "back_to_reviews": "Back to all reviews",
   "related_reviews": "Related Reviews",
   "footer_copyright": "© 2025 Esvita Clinic Reviews",
-  "footer_disclaimer": "This site displays verified patient reviews for informational purposes."
+  "footer_disclaimer": "This site displays verified patient reviews for informational purposes.",
+  "page": "Page",
+  "previous": "Previous",
+  "next": "Next"
 }

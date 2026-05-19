@@ -95,7 +95,7 @@ export default function TreatmentPage({ params }: Props) {
         <h2 className="font-display text-2xl font-bold text-brand-green mb-6">
           Patient Reviews — {content.name}
         </h2>
-        <ReviewGrid reviews={reviews} locale={locale} />
+        <ReviewGrid reviews={reviews} locale={locale} currentPage={1} />
       </section>
 
       {/* FAQ / GEO content */}

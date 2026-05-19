@@ -13,7 +13,7 @@
   "filter_label_rating": "Puan",
   "filter_label_country": "Ülke",
   "read_full_review": "Tam yorumu oku",
-  "verified_patient": "Doğrulanmış Hasta",
+  "verified_patient": "Doğrulandı",
   "featured": "Öne Çıkan",
   "stars": "yıldız",
   "reviews_count": "{count} yorum",
@@ -27,5 +27,10 @@
   "back_to_reviews": "Tüm yorumlara dön",
   "related_reviews": "İlgili Yorumlar",
   "footer_copyright": "© 2025 Esvita Klinik Yorumları",
-  "footer_disclaimer": "Bu site, bilgilendirme amacıyla doğrulanmış hasta yorumlarını göstermektedir."
+  "footer_disclaimer": "Bu site, bilgilendirme amacıyla doğrulanmış hasta yorumlarını göstermektedir.",
+  "write_a_review": "Yorum Yaz",
+  "showing_reviews": "{count} yorum gösteriliyor",
+  "page": "Sayfa",
+  "previous": "Önceki",
+  "next": "Sonraki"
 }

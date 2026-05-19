@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import StarRating from './StarRating'
 
 type Props = {
@@ -7,12 +8,14 @@ type Props = {
   locale?: string
 }
 
-export default function AggregateRating({ average, count, locale }: Props) {
+export default async function AggregateRating({ average, count, locale }: Props) {
+  const t = await getTranslations()
+
   return (
     <div className="flex flex-col sm:flex-row items-center justify-between gap-6 bg-brand-cream border border-green-100 rounded-2xl px-8 py-6 shadow-sm">
       <div className="flex flex-col sm:flex-row items-center gap-4">
         <div className="text-center sm:text-left">
-          <div className="font-display text-6xl font-bold text-brand-green leading-none">
+          <div className="text-6xl font-bold text-brand-green leading-none">
             {average.toFixed(1)}
           </div>
           <div className="text-gray-500 text-sm mt-1">out of 5</div>
@@ -20,7 +23,7 @@ export default function AggregateRating({ average, count, locale }: Props) {
         <div className="flex flex-col items-center sm:items-start gap-2">
           <StarRating rating={Math.round(average)} size="lg" />
           <p className="text-gray-600 text-sm">
-            Based on <span className="font-semibold text-brand-green">{count}</span> verified reviews
+            {t('based_on', { count })}
           </p>
         </div>
       </div>
@@ -33,7 +36,7 @@ export default function AggregateRating({ average, count, locale }: Props) {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
-          Write a Review
+          {t('write_a_review')}
         </Link>
       )}
     </div>

@@ -13,7 +13,7 @@
   "filter_label_rating": "Valoración",
   "filter_label_country": "País",
   "read_full_review": "Leer reseña completa",
-  "verified_patient": "Paciente Verificado",
+  "verified_patient": "Verificado",
   "featured": "Destacado",
   "stars": "estrellas",
   "reviews_count": "{count} reseñas",
@@ -27,5 +27,10 @@
   "back_to_reviews": "Volver a todas las reseñas",
   "related_reviews": "Reseñas Relacionadas",
   "footer_copyright": "© 2025 Reseñas Esvita Clinic",
-  "footer_disclaimer": "Este sitio muestra reseñas verificadas de pacientes con fines informativos."
+  "footer_disclaimer": "Este sitio muestra reseñas verificadas de pacientes con fines informativos.",
+  "write_a_review": "Escribir una reseña",
+  "showing_reviews": "Mostrando {count} reseñas",
+  "page": "Página",
+  "previous": "Anterior",
+  "next": "Siguiente"
 }
