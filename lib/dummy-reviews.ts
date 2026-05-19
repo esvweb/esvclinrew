@@ -2565,6 +2565,22 @@ const REVIEWS: Review[] = [
     verified: true,
     featured: false,
   },
+  {
+    slug: "hans-becker-hair-transplant-161",
+    reviewer_name: "Hans Becker",
+    country: "Germany",
+    country_code: "DE",
+    flag_emoji: "🇩🇪",
+    city: "Berlin",
+    treatment: "Hair Transplant",
+    treatment_slug: "hair-transplant",
+    rating: 5,
+    date: "2024-06-12",
+    year: 2024,
+    review_text_en: "Esvita Clinic is excellent. From start to finish everything was very professional. The doctors and assistants were incredibly attentive. I can only recommend it.",
+    verified: true,
+    featured: false,
+  },
 ]
 
 export function getAllReviews(): Review[] {
